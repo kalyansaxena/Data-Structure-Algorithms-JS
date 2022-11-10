@@ -10,11 +10,17 @@ class Stack {
   }
 
   pop() {
-    return this.items.pop();
+    if (!isEmpty()) {
+      return this.items.pop();
+    }
+    return null;
   }
 
   peek() {
-    return this.items[this.items.length - 1];
+    if (!isEmpty()) {
+      return this.items[this.items.length - 1];
+    }
+    return null;
   }
 
   isEmpty() {
